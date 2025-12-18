@@ -1,7 +1,7 @@
 import { Sparkles } from 'lucide-react';
 import TimelineCard from './TimelineCard';
-import step_icon1 from '../assets/step-icon1.svg'
-import step_icon2 from '../assets/step-icon2.svg'
+import step_icon1 from '../assets/step-icon-1.svg'
+import step_icon2 from '../assets/step-icon-2.svg'
 import step_icon3 from '../assets/step-icon3.svg'
 
 const ProcessFlow = () => {
@@ -33,20 +33,18 @@ const ProcessFlow = () => {
     ];
 
     return (
-        <section id='about' className="w-full flex flex-col items-center py-40 px-4 sm:px-12 lg:px-24 xl:px-40 min-h-screen">
-            <div className="w-full">
+        <section id='about' className="w-full py-40 px-4 sm:px-12 lg:px-24 xl:px-40 min-h-screen transition-all">
+            {/* Section Header */}
+            <div className="flex items-center gap-2 mb-18">
+                <h2 className="text-3xl md:text-4xl text-white font-semibold">
+                    My process to design
+                </h2>
+                <Sparkles className="text-white" size={24} />
+            </div>
 
-                {/* Section Header */}
-                <div className="flex items-center gap-2 mb-16">
-                    <h2 className="text-3xl md:text-4xl text-white font-semibold">
-                        My process to design
-                    </h2>
-                    <Sparkles className="text-white" size={24} />
-                </div>
-
-                {/* Timeline Steps Loop */}
-                <div className="timeline-steps flex flex-col">
-                    {stepsData.map((step, index) => (
+            {/* Timeline Steps Loop */}
+            <div className="timeline-steps flex flex-col">
+                {stepsData.map((step, index) => (
                         <TimelineCard
                             key={step.id}
                             number={step.number}
@@ -57,9 +55,7 @@ const ProcessFlow = () => {
                             // Determine if it's the last step to hide the connecting line
                             isLastStep={index === stepsData.length - 1}
                         />
-                    ))}
-                </div>
-
+                ))}
             </div>
         </section>
     );

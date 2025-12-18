@@ -1,47 +1,59 @@
-import React from 'react';
-import StarShape from './ui/StarShape';
+import { FaRegUser, FaFacebookF, FaTwitter } from "react-icons/fa";
+import Menubar from "./Menubar";
+import logo from '../assets/site-logo.webp'
+import { FaSquareDribbble, FaSquareInstagram } from "react-icons/fa6";
+import AnimatedBorder from "./ui/AnimatedBorder";
+import { User } from "lucide-react";
 
 const Footer = () => {
     return (
-        <div className="relative w-full h-96 bg-[#0a0a0a] overflow-hidden flex items-center justify-center">
+        <footer className="w-full flex flex-col md:flex-row items-center justify-between px-4 py-4 sm:px-12 lg:px-24 xl:px-40 pt-20 gap-8">
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+                <div className="logo-wrap">
+                    <img src={logo} alt="" className='w-9 sm:w-12' />
+                </div>
+                <span className="text-white font-medium text-lg">znisa</span>
+            </div>
 
-            {/* 1. The Grid Layer */}
-            <div
-                className="absolute inset-0"
-                style={{
-                    backgroundImage: `
-            linear-gradient(to right, #222 1px, transparent 1px),
-            linear-gradient(to bottom, #222 1px, transparent 1px)
-          `,
-                    backgroundSize: '80px 80px', // Adjust this to change grid size
-                    maskImage: 'radial-gradient(ellipse at center, black, transparent 80%)' // Fades the grid at edges
-                }}
+            {/* Social Bar */}
+            <Menubar
+                showHome={false}
+                navLinks={[]}
+                containerClassName="px-8 py-2"
+                renderData={(
+                    <div className="flex items-center gap-10">
+                        <FaTwitter className="text-zinc-400 hover:text-white cursor-pointer transition-all text-lg" />
+                        <FaSquareDribbble className="text-zinc-400 hover:text-white cursor-pointer transition-all text-lg" />
+                        <FaSquareInstagram className="text-zinc-400 hover:text-white cursor-pointer transition-all text-lg" />
+                        <FaFacebookF className="text-zinc-400 hover:text-white cursor-pointer transition-all text-lg" />
+                    </div>
+                )}
             />
 
-            {/* 2. The Content Area */}
-            <div className="relative z-10 text-white text-center">
-                <h2 className="text-4xl font-medium mb-4">Have idea about project?</h2>
-                <p className="text-gray-400 mb-8 max-w-sm mx-auto">
-                    Write anything here to showcase what you are doing.
-                </p>
-                <button className="bg-gradient-to-r from-indigo-400 to-orange-200 text-black px-6 py-2 rounded-full font-semibold">
-                    Send us a message
-                </button>
+            {/* Action Buttons */}
+            <div className='flex items-center gap-3 sm:gap-2'>
+                {/* Hire me Button */}
+                <AnimatedBorder
+                    className="h-12 cursor-pointer max-sm:hidden"
+                    containerClassName="bg-gradient-to-r from-[#A78BFA] to-[#FDE68A] px-8 font-medium hover:bg-white/10 transition-colors" // Inner padding and hover effect
+                    duration="3s"
+                >
+                    <button className=''>Hire me</button>
+                </AnimatedBorder>
+
+                {/*User Icon Button */}
+                <AnimatedBorder
+                    className="h-12 w-12 max-sm:hidden"
+                    containerClassName="bg-gradient-to-r from-[#A78BFA] to-[#FDE68A] p-0 hover:bg-white/10 transition-colors" // p-0 centers the icon perfectly
+                >
+                    <button aria-label="User Profile" className="flex items-center justify-center cursor-pointer h-full w-full">
+                        <User size={20} strokeWidth={1.5} />
+                    </button>
+                </AnimatedBorder>
             </div>
+        </footer>
+    )
+}
 
-            {/* 3. Manually Placed Stars (Matching your screenshot) */}
-            {/* Star 1 */}
-            <div className="absolute top-[40%] left-[70%] -translate-x-1/2 -translate-y-1/2">
-                <StarShape className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-            </div>
-
-            {/* Star 2 */}
-            <div className="absolute top-[60%] left-[78%] -translate-x-1/2 -translate-y-1/2">
-                <StarShape className="w-4 h-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-            </div>
-
-        </div>
-    );
-};
-
-export default Footer;
+export default Footer

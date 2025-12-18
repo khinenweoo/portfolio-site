@@ -5,9 +5,9 @@ const GradientButton = ({ children, className = "", onClick }) => {
             className={`
         flex items-center justify-center
         rounded-full
-        bg-gradient-to-r from-[#A78BFA] to-[#FDE68A] /* Soft Purple to Peach Gradient */
+        bg-linear-to-r from-[#A78BFA] to-[#FDE68A] 
         text-black font-medium
-        transition-transform hover:scale-105 active:scale-95 /* Subtle interaction animation */
+        transition-transform hover:scale-105 active:scale-95 
         ${className}
       `}
         >
