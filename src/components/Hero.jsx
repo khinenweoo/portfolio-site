@@ -13,7 +13,7 @@ const Hero = () => {
                     linear-gradient(to right, #666 1px, transparent 1px),
                     linear-gradient(to bottom, #666 1px, transparent 1px)
                     `,
-                      backgroundSize: '160px 90px'
+                    backgroundSize: '171.5px 90px'
                   }}
               />
               {/* Star element */}
@@ -22,12 +22,12 @@ const Hero = () => {
                   <StarShape className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
               </div>
               {/* Star 2 */}
-              <div className="absolute top-[14%] right-[18%] -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute top-[15%] right-[16%] -translate-x-1/2 -translate-y-1/2">
                   <StarShape className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
               </div>
 
               {/* content */}
-              <div className='w-full max-w-2xl py-8 mx-auto h-1/2 translate-y-1/2 bg-[#101111] rounded-md'>
+        <div className='w-full max-w-2xl py-14 mx-auto h-1/2 translate-y-1/2 bg-[#101111] rounded-md'>
                 <div className="relative flex flex-col items-center justify-center">
                     <motion.h1
                         className="text-white text-3xl font-semibold text-center mb-6 leading-tight"

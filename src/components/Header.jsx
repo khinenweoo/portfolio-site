@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/site-logo.webp'
 import menu_icon from '../assets/menu_icon_dark.svg'
 import { User, X } from 'lucide-react'
 import Topbar from './Topbar'
-import GradientButton from './ui/GradientButton'
 import AnimatedBorder from './ui/AnimatedBorder'
 
 const navLinks = [
@@ -39,7 +38,6 @@ const Header = () => {
 
             {/* Middle Menubar */}
             <Topbar className="max-sm:hidden" navLinks={navLinks}/>
-            
 
             {/* Mobile Menu */}
             <nav className={`md:hidden ${!sidebarOpen ? 'max-sm:w-0 overflow-hidden' : 'max-sm:w-60 max-sm:pl-10'} max-sm:fixed top-0 bottom-0 right-0
@@ -56,20 +54,18 @@ const Header = () => {
             </nav>
             <div className='flex items-center gap-1 sm:gap-2'>
                 <img src={menu_icon} alt="" className="w-8 h-6 cursor-pointer sm:hidden" onClick={() => setSidebarOpen(true)} />
-                {/* Hire Me Button */}
-                {/* The "Hire me" Pill Button */}
-                {/* 1. The "Hire me" Pill Button */}
+                {/* Hire me Button */}
                 <AnimatedBorder
-                    className="h-12"  // Sets the overall height of the pill
+                    className="h-12" 
                     containerClassName="bg-gradient-to-r from-[#A78BFA] to-[#FDE68A] px-8 font-medium hover:bg-white/10 transition-colors" // Inner padding and hover effect
-                    duration="3s" // Slightly faster spin for buttons looks good
+                    duration="3s"
                 >
                     <button className=''>Hire me</button>
                 </AnimatedBorder>
 
                 {/*User Icon Button */}
                 <AnimatedBorder
-                    className="h-12 w-12" // Fixed equal dimensions creates the circle
+                    className="h-12 w-12"
                     containerClassName="bg-gradient-to-r from-[#A78BFA] to-[#FDE68A] p-0 hover:bg-white/10 transition-colors" // p-0 centers the icon perfectly
                 >
                     <button aria-label="User Profile" className="flex items-center justify-center h-full w-full">

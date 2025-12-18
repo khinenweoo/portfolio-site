@@ -20,7 +20,7 @@ const Footer = () => {
 
             {/* 2. The Content Area */}
             <div className="relative z-10 text-white text-center">
-                <h2 className="text-4xl font-medium mb-4">Have idea about project? ✨</h2>
+                <h2 className="text-4xl font-medium mb-4">Have idea about project?</h2>
                 <p className="text-gray-400 mb-8 max-w-sm mx-auto">
                     Write anything here to showcase what you are doing.
                 </p>
