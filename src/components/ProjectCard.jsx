@@ -1,15 +1,12 @@
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ project, index }) => {
-    // Determine if the layout should be reversed (Text first, then Image)
-    const isReversed = index % 2 !== 0;
+const ProjectCard = ({ project }) => {
 
     return (
         <motion.div
             whileHover={{ y: -10 }} // Smooth move above effect
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className={`flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''
-                } items-center bg-[#111111] rounded-3xl p-6 md:p-10 gap-10 md:gap-20 w-full max-w-5xl mx-auto mb-8 cursor-pointer border border-white/5`}
+            className={`flex flex-col md:flex-row items-center bg-[#111111] rounded-3xl p-6 md:p-10 gap-10 md:gap-20 w-full max-w-5xl mx-auto mb-8 cursor-pointer border border-white/5`}
         >
             {/* Project Image */}
             <div

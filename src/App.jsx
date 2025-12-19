@@ -5,6 +5,7 @@ import Projects from "./components/ProjectsSection"
 import TestimonialSection from "./components/TestimonialSection"
 import ContactSection from "./components/ContactSection"
 import Footer from "./components/Footer"
+import TechStack from "./components/TechStack"
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div className="relative bg-[#101111]">
       <Navbar />
       <Hero />
+      <TechStack />
       <ProcessFlow />
       <Projects />
       <TestimonialSection />

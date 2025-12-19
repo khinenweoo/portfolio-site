@@ -32,11 +32,11 @@ const ProjectsSection = () => {
       </div>
 
       <div className="space-y-12">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
             key={project.id}
           >
-            <ProjectCard key={project.id} project={project} index={index} />
+            <ProjectCard key={project.id} project={project} />
           </div>
         ))}
       </div>
